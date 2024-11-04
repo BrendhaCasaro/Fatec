@@ -1,18 +1,18 @@
 #include "stdbrendha.h"
 #include <locale.h>
 
-#define ex14
+#define ex13
 
 #ifdef ex13
 
-//Receba o peso via teclado e o número de identificação gerado pelo programador contendo no
-//máximo de 15 pessoas. A quantidade de indivíduos será definida pelo usuário. Armazene esses
-//dados em dois vetores, o primeiro contendo os pesos e o segundo contendo os números de
-//identificação. Calcule e mostre:
-//a) Quantas pessoas apresentaram peso superior ao menor peso. Armazene os números de
-//identificação das pessoas que satisfazem essa condição. Mostre o conteúdo desse vetor.
+//Receba o peso via teclado e o nï¿½mero de identificaï¿½ï¿½o gerado pelo programador contendo no
+//mï¿½ximo de 15 pessoas. A quantidade de indivï¿½duos serï¿½ definida pelo usuï¿½rio. Armazene esses
+//dados em dois vetores, o primeiro contendo os pesos e o segundo contendo os nï¿½meros de
+//identificaï¿½ï¿½o. Calcule e mostre:
+//a) Quantas pessoas apresentaram peso superior ao menor peso. Armazene os nï¿½meros de
+//identificaï¿½ï¿½o das pessoas que satisfazem essa condiï¿½ï¿½o. Mostre o conteï¿½do desse vetor.
 //b) Armazene num outro vetor os pesos superiores a 55 quilos e menores ou igual a 80 quilos
-//das pessoas. Mostre o conteúdo desse vetor.
+//das pessoas. Mostre o conteï¿½do desse vetor.
 int main ()
 {
     int users;
@@ -20,13 +20,13 @@ int main ()
 
     do
     {
-        pick(&users, "%d", "Digite a quantidade de usuários: ");
+        pick(&users, "%d", "Digite a quantidade de usuï¿½rios: ");
     }
     while(users < 0 || users > 15);
 
     int pesos[users], id[users];
 
-    alimentArray(pesos, users, "Digite o peso do usuário em quilos: ", "%d");
+    alimentArray(pesos, users, "Digite o peso do usuï¿½rio em quilos: ", "%d");
     printArray_i(pesos, users, "Pesos: ", "%d, ");
 
     teste(id, users);
@@ -54,7 +54,7 @@ int main ()
      }
     }
     printf("Quantidade de pessoas que apresentaram peso maior que o menor peso: %d\n", Cont_menorP);
-    printArray_i(Id_maiorP, users, "IDs de usuários que apresentaram os maiores pesos", "%d, ");
+    printArray_i(Id_maiorP, users, "IDs de usuï¿½rios que apresentaram os maiores pesos", "%d, ");
 
 
     int MaiorPeso[users];
@@ -72,9 +72,9 @@ int main ()
 
 #ifdef ex14
 /*Receba a nota de dez alunos e armazene essas notas em um vetor. Calcule e mostre:
-a) A média da classe;
-b) A quantidade de alunos aprovados, isto é, com nota >=7;
-c) A quantidade de alunos reprovados, isto é, com nota <7.
+a) A mï¿½dia da classe;
+b) A quantidade de alunos aprovados, isto ï¿½, com nota >=7;
+c) A quantidade de alunos reprovados, isto ï¿½, com nota <7.
 */
 
 int main ()
