@@ -70,33 +70,38 @@ void Armazena()
     forzao(12)
     {
         printf("Insira um número qualquer: ");
-        scanf("%d", &vetorA);
+        scanf("%d", &vetorA[i]);
     }
 }
 
 void Quant_Positivos()
 {
-    int cont = 0;
+    int cont[12] = {0};
 
     forzao(12)
     {
        if(vetorA[i] > 0)
        {
-        cont++;
+        cont[i] = cont[i - 1] + 1;
        }
-
+       else
+       {
+        cont[i] = 0;    
+        printf("Valor negativo\n");
+       }
+    printf("Contador de números positivos: %d \n", cont[i]);
     }
 }
 void Exiba ()
     {
-        int cont121[12] = 0;
+        int cont121[12] = {0};
 
         forzao(12)
         {
             if(vetorA[i] > 121)
             {
-                cont121[i] = i;
-                printf("%d", cont121);
+                cont121[i] = i + 1;
+                printf("Posições em que houveram números maiores que 121: %d \n", cont121[i]);
             }
         }
     }
@@ -117,14 +122,18 @@ void Exiba ()
 
         forzao(12)
         {
-        mediaNeg = media[i] 
+        mediaNeg = media[i]  
         }
     }
     
 
  int main ()   
 {
+    Armazena();
 
+    //Quant_Positivos();
+
+    Exiba();
 }
 
 
