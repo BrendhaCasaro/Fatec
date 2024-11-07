@@ -19,7 +19,7 @@ void pick(void* var, char* fmt, char* txt)
     }\
 }
 
-void teste(int *vet, int t)
+int *teste(int*vet, int t)
 {
     for(int i = 0; i < t; i++)
     {
