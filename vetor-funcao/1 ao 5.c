@@ -122,8 +122,14 @@ void Exiba ()
 
         forzao(12)
         {
-        mediaNeg = media[i]  
+        mediaNeg += media[i];
         }
+
+        printArray_i(media, 12, "", "%d ");
+
+        mediaNeg = mediaNeg / 12;
+
+        printf("Média dos negativos presentes: %d\n", mediaNeg);
     }
     
 
@@ -131,10 +137,10 @@ void Exiba ()
 {
     Armazena();
 
-    //Quant_Positivos();
+    Quant_Positivos();
 
     Exiba();
+
+    Negativos();
 }
-
-
 #endif //ex2
