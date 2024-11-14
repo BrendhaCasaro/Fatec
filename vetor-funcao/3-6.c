@@ -13,11 +13,11 @@ int vetorA[7];
 
 void armazena(int *vet)
 {
-    alimentArray(vet, 7, "Insira 7 números inteiros", "%d");
+    alimentArray(vet, 7, "Insira 7 números inteiros\n", "%d\n");
 }
 
 
-void med_5(int *vet)
+int med_5(int *vet)
 {
     int multiplos[7];
     int j = 0;
@@ -41,10 +41,40 @@ void med_5(int *vet)
     }
 
     media /= contM;
+
+    return media; 
 }
+
+
+int inverte_A[7];
+
+void inverte(int *vet)
+{
+    forzao(7)
+    {
+        int j = 7;
+
+        inverte_A[j] = vet[i];
+    }
+
+    printArray_i(vet, 7, "Valores do vetor A", "%d");
+    printArray_i(inverte_A, 7, "Valores invertidos do Vetor A no vetor inverte_A", "%d");
+}
+
+void menor_num(vetorA)
+{
+    forzao(7)
+    {
+
+    }
+}
+
 
 
 int main ()
 {
     armazena(vetorA);
+
+    int media = med_5(vetorA);
+    printf("%d\n", media);
 }
