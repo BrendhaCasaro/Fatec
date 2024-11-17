@@ -1,6 +1,8 @@
 #include "stdbrendha.h"
 
+#define ex3
 
+#ifdef ex3
 //Crie o programa dividido em funções:
 //a)Função Armazena: é utilizada para guardar 7 números positivos no vetor A.
 //b)Função MED_5: calcule a média dos números que são múltiplos de cinco. 
@@ -104,3 +106,12 @@ int main ()
 
     return 0;
 }
+#endif //ex3
+
+
+#ifdef ex4
+
+
+
+
+#endif //ex4
