@@ -1,6 +1,6 @@
 #include "stdbrendha.h"
 
-#define ex3
+#define ex4
 
 #ifdef ex3
 //Crie o programa dividido em funções:
@@ -110,8 +110,39 @@ int main ()
 
 
 #ifdef ex4
+// Crie o programa dividido em funções:
+// a)Função Armazena: é utilizada para guardar no mínimo 3 e no máximo 12 números quaisquer no vetor X. 
+// Essa quantidade é   determinada pelo usuário e definida como uma variável local à função main chamada de quant.
+// b)Função Soma_7: calcule a soma apenas dos números contidos no vetor X que são divisíveis por 7. 
+// Exiba esta soma no interior desta função.
+// c)Função Menor_Par: verifique o menor número par contido no vetor X. 
+// Exiba no interior da função main. Caso não tenha nenhum número par no interior do vetor X, 
+// informe ao usuário no interior da função main.
+// d)Função ExibaMenor_Par: exiba em que posições o menor número par apareceu no veotr X.
+// Leia a nota da prova de 15 alunos e armazene num vetor, calcule e imprima a média geral. 
+// As notas devem ser maiores ou iguais a zero e menores ou iguais a 10.
+
+int vetorX[12];
 
 
+void armazena(int* vet, int *t)
+{
+    alimentArray(vet, t, "Insira os números", "%d");
+}
 
+
+int main()
+{
+    int quant;
+
+    while (quant < 3 && quant > 12)
+    {
+    pick(&quant, "%d", "Insira quantos números o vetor terá, de 3 a 12"); 
+    }
+
+    armazena(vetorX, quant);
+    
+
+}
 
 #endif //ex4
