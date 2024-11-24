@@ -1,6 +1,7 @@
 #include "stdbrendha.h"
 
 #define ex4
+#define ex4
 
 #ifdef ex3
 // Crie o programa dividido em funções:
