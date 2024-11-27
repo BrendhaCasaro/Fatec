@@ -1,7 +1,7 @@
 #include "stdbrendha.h"
+#include <stdlib.h>
 
-#define ex4
-#define ex4
+#define ex5
 
 #ifdef ex3
 // Crie o programa dividido em funções:
@@ -225,5 +225,85 @@ int main()
 
     return 0;
 }
-
 #endif // ex4
+
+#ifdef ex5
+// 5.	Crie o programa dividido em funções:
+// a.	Função Armazenas :armazena no vetor A  no mínimo 7 e no máximo 18 números quaisquer.
+// Essa quantidade é determinada pelo usuário e definida
+// como uma variável local à função main chamada de quant.
+// b.	Função VetPositivos: armazene neste vetor apenas os
+// números maiores ou iguais azero contidos no vetor A.
+// Caso não tenha sido encontrado no vetorA  nenhum número que satisfaça essas condições
+// informe ao usuário no interior da função main.
+// c.	Função Fatorial:crie uma função que calcule o fatorial de
+// cada número do VetPositivos e o  seu fatorial no vetor FatorialVetPositivos.
+
+void armazenas(int *vet, int *t)
+{
+    alimentArray(vet, *t, "Preencha o vetor", "%d");
+}
+
+int *VetPositivos(int *vet, int *t)
+{
+    int cont = 0, j = 0;
+    forzao(*t)
+    {
+        if (vet[i] >= 0)
+        {
+            cont++;
+        }
+    }
+
+    if (cont == 0)
+    {
+        return NULL;
+    }
+
+    int *vetorPositivos = (int *)malloc(sizeof(int) * cont);
+
+    forzao(cont)
+    {
+        if (vet[i] >= 0)
+        {
+            vetorPositivos[j] = vet[i];
+            j++;
+        }
+    }
+
+    return vetorPositivos;
+}
+
+unsigned long fatorial(unsigned long n)
+{
+    if (n == 1) {
+        return n;
+    }
+
+    return n * fatorial(n - 1);
+}
+
+int main()
+{
+    // int quant;
+
+    // do
+    // {
+    //     pick(&quant, "%d", "Digite o tamanho que você quer que o vetor tenha: ");
+    // } while (quant < 7 || quant > 18);
+
+    // int vetorA[quant];
+
+    // armazenas(vetorA, &quant);
+
+    // if (VetPositivos(vetorA, &quant) == NULL)
+    // {
+    //     printf("Não há números maiores ou iguais a zero\n");
+    // }
+
+    printf("%ld\n", fatorial(420));
+
+    return 0;
+}
+
+#endif // ex5
